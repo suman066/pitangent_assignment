@@ -3,8 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'dart:async';
 
-import '../../../network/app_exceptions.dart';
-
+import 'app_exceptions.dart';
 
 class ApiBaseHelper {
 
