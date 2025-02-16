@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:go_router/go_router.dart';
-import '../../common/helper/navigation_helper.dart';
 import 'account_section/my_account.dart';
 import 'cart_section/bloc/cart_bloc.dart';
 import 'cart_section/cart_page.dart';
@@ -31,7 +29,7 @@ class MainPageState extends State<MainPage> {
       bottomNavigationBar: ValueListenableBuilder<int>(
         valueListenable: selectedIndexNotifier,
         builder: (context, selectedIndex, child) {
-          return BlocBuilder<CartBloc, List<Product>>(
+          return BlocBuilder<CartBloc, Map<Product, int>>(
               builder: (context, cartItems) {
               return BottomNavigationBar(
                 type: BottomNavigationBarType.fixed,
@@ -66,7 +64,7 @@ class MainPageState extends State<MainPage> {
                           right: -7,
                           top: -3,
                           child:
-                cartItems!=null && cartItems.isNotEmpty?
+                          cartItems!=null && cartItems.isNotEmpty?
                           Container(
                             padding: const EdgeInsets.all(4),
                             decoration: BoxDecoration(
