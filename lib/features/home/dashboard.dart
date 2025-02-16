@@ -83,7 +83,7 @@ class MainPageState extends State<MainPage> {
     }
   }
 
-  StatefulWidget onItemTapped(BuildContext context, int index) {
+  Widget onItemTapped(BuildContext context, int index) {
     selectedIndexNotifier.value = index;
 
     switch (index) {

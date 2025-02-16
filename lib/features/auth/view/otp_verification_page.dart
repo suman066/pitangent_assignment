@@ -217,7 +217,7 @@ class _OTPScreenState extends State<OTPScreen> {
       Navigator.pop(context);
 
       Fluttertoast.showToast(
-          msg: "Welcome ${userName}",
+          msg: "Welcome ${num}",
           fontSize: 16,
           backgroundColor: Colors.orange[100],
           textColor: darkThemeBlue,
