@@ -1,9 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../cart_section/bloc/cart_bloc.dart';
-import '../cart_section/cart_page.dart';
 import 'bloc/home_bloc.dart';
 import 'bloc/home_state.dart';
 
@@ -13,15 +11,6 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Products'),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.shopping_cart),
-            onPressed: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => CartPage()),
-            ),
-          ),
-        ],
       ),
       body: BlocBuilder<ProductBloc, ProductState>(
         builder: (context, state) {

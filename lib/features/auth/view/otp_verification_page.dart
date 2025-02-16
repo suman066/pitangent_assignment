@@ -206,10 +206,6 @@ class _OTPScreenState extends State<OTPScreen> {
           textColor: darkThemeBlue,
           toastLength: Toast.LENGTH_SHORT);
 
-      Map body = {
-        "phone":"${widget.phoneNumber}",
-      };
-
       final prefs = await SharedPreferences.getInstance();
       prefs.setBool('otpVerified', true);
       prefs.setString('phoneNumber', number);
@@ -217,7 +213,7 @@ class _OTPScreenState extends State<OTPScreen> {
       Navigator.pop(context);
 
       Fluttertoast.showToast(
-          msg: "Welcome ${num}",
+          msg: "Welcome to Dashboard",
           fontSize: 16,
           backgroundColor: Colors.orange[100],
           textColor: darkThemeBlue,
